@@ -1,0 +1,32 @@
+{
+  "keys": [
+    {
+      "key_id": "archive-master-v1",
+      "type": "AES_256",
+      "algorithm": "AES",
+      "scope": "global",
+      "domains": 3,
+      "services": [
+        "archive"
+      ],
+      "rotation_policy": "manual",
+      "custody": "KMS",
+      "lifecycle_state": "active",
+      "protects_data": "patient_archive"
+    },
+    {
+      "key_id": "partner-signing-v1",
+      "type": "RSA_2048",
+      "algorithm": "RSA",
+      "scope": "external",
+      "domains": 1,
+      "services": [
+        "partner"
+      ],
+      "rotation_policy": "annual",
+      "custody": "HSM",
+      "lifecycle_state": "active",
+      "protects_data": "partner_export"
+    }
+  ]
+}
