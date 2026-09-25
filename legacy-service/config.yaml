@@ -1,0 +1,3 @@
+crypto:
+  hashing: MD5
+  target_data: billing_archive

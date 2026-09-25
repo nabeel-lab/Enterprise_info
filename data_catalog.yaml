@@ -1,0 +1,32 @@
+
+# Data Catalog
+patient_archive:
+  sensitivity: Restricted
+  business_criticality: High
+  business_purpose: Long-term medical archive
+  retention: 10 years
+  required_protection_until: 2036-09-30
+  external_exposure: Internal
+  replication: 3 regions
+  backup: Enabled
+
+partner_export:
+  sensitivity: Confidential
+  business_criticality: Medium
+  purpose: External partner exchange
+  retention: 1 year
+  required_protection_until: 2027-09-30
+  external_exposure: External Partner
+  replication: 1 region
+
+auth_tokens:
+  sensitivity: Restricted
+  purpose: Session authentication
+  retention: Short-lived
+  required_protection_until: 2026-10-31
+
+billing_archive:
+  sensitivity: Confidential
+  purpose: Financial records
+  retention: 7 years
+  required_protection_until: 2033-01-01

@@ -1,0 +1,45 @@
+
+keys:
+  archive-master-v1:
+    algorithm: RSA
+    key_size: 2048
+    purpose: key wrapping
+    scope: archive + backup
+    rotation_policy: manual
+    domains: 3
+    lifecycle: ACTIVE
+    custody: AWS KMS
+  
+  partner-signing-v1:
+    algorithm: ECDSA
+    curve: P-256
+    purpose: signing
+    scope: partner
+    rotation_policy: auto-1year
+    lifecycle: ACTIVE
+    custody: AWS KMS
+
+  export-key-v1:
+    algorithm: AES-256-GCM
+    purpose: encryption
+    scope: export
+    rotation_policy: auto-90days
+    lifecycle: ACTIVE
+    custody: AWS KMS
+
+  backup-key-v1:
+    algorithm: AES-256-GCM
+    purpose: encryption
+    scope: backup
+    rotation_policy: manual
+    lifecycle: ACTIVE
+    custody: AWS KMS
+
+  identity-signing-v1:
+    algorithm: RSA
+    key_size: 2048
+    purpose: verification
+    scope: identity
+    rotation_policy: manual
+    lifecycle: ACTIVE
+    custody: Custom HSM

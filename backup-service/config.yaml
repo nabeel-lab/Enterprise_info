@@ -1,0 +1,4 @@
+crypto:
+  provider: AWS KMS
+  encryption: AES-256-GCM
+  target_data: billing_archive

@@ -1,0 +1,4 @@
+crypto:
+  provider: Custom HSM
+  verification: RSA
+  target_data: auth_tokens

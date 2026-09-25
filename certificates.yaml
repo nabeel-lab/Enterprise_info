@@ -1,0 +1,36 @@
+
+certificates:
+  archive.carevault.internal:
+    issuer: Internal CA
+    valid_until: 2028-01-01
+    public_key_algorithm: RSA
+    key_size: 2048
+    signature_algorithm: SHA256withRSA
+    environment: Production
+    service: archive-service
+
+  partner.carevault.internal:
+    issuer: External CA
+    valid_until: 2027-01-01
+    public_key_algorithm: ECDSA
+    curve: P-256
+    signature_algorithm: SHA256withECDSA
+    environment: Production
+    service: partner-service
+
+  gateway.carevault.internal:
+    issuer: Public CA
+    valid_until: 2026-12-31
+    public_key_algorithm: RSA
+    key_size: 2048
+    signature_algorithm: SHA256withRSA
+    environment: Production
+    service: gateway-service
+
+  vpn.carevault.internal:
+    issuer: Internal CA
+    valid_until: 2030-01-01
+    public_key_algorithm: RSA
+    key_size: 4096
+    signature_algorithm: SHA512withRSA
+    environment: Infrastructure

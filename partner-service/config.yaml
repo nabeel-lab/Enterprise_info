@@ -1,0 +1,4 @@
+crypto:
+  provider: AWS KMS
+  signing: ECDSA
+  target_data: partner_export

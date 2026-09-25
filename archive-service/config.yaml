@@ -1,0 +1,5 @@
+crypto:
+  provider: AWS KMS
+  key_wrapping: RSA
+  target_data: patient_archive
+  tls: true
